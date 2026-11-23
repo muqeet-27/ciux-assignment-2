@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday Assistant - V3</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div>
+        <h1>Birthday Assistant (V3)</h1>
+        <p class="subtitle">Dialogue State, Context &amp; Clarification</p>
+      </div>
+      <button class="secondary" onclick="resetChat()">Reset Conversation</button>
+    </div>
+    <div id="chat" class="chat"></div>
+    <div class="row">
+      <input id="q" type="text" placeholder="Ask a birthday question or follow-up...">
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

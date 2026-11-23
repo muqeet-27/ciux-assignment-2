@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Birthday Assistant - V5</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <div>
+        <h1>Birthday Assistant - Voice Edition (V5)</h1>
+        <p class="subtitle">Type or speak. Responses can be read aloud by the browser.</p>
+      </div>
+      <button class="secondary" id="resetBtn" type="button">Reset Conversation</button>
+    </header>
+    <section id="chat" class="chat" aria-live="polite" aria-label="Conversation"></section>
+    <form id="messageForm" class="row">
+      <input id="q" type="text" placeholder="Ask a question or click Speak..." autocomplete="off" aria-label="Your message">
+      <button type="submit">Send</button>
+      <button id="speakBtn" type="button" class="secondary">Speak</button>
+    </form>
+    <footer class="controls">
+      <label class="toggle">
+        <input id="speakBack" type="checkbox" checked>
+        Read responses aloud
+      </label>
+      <span id="voiceStatus" role="status"></span>
+    </footer>
+  </main>
+  <script src="{{ url_for('static', filename='chat.js') }}" defer></script>
+</body>
+</html>
